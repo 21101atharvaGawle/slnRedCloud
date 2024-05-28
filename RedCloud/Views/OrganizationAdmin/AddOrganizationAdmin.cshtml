@@ -1,0 +1,153 @@
+﻿@*
+    For more information on enabling MVC for empty projects, visit https://go.microsoft.com/fwlink/?LinkID=397860
+*@
+@{
+}
+
+
+@model RedCloud.ModelVM.OrganizationAdminVM;
+
+
+<style>
+    .container {
+        width: 400px; /* Set the width of the container */
+        margin: 0 auto; /* Center the container horizontally */
+    }
+    /* Adjust checkbox size and position */
+    .form-check-input {
+        width: 20px; /* Set the width of the checkbox */
+        height: 20px; /* Set the height of the checkbox */
+        margin-top: 7px; /* Adjust vertical alignment */
+    }
+
+    /* Adjust label position */
+    .form-check-label {
+        margin-left: 5px; /* Add space between checkbox and label */
+        vertical-align: top; /* Align label with checkbox */
+    }
+
+    form {
+        border: 2px solid black;
+        padding: 10px;
+    }
+</style>
+<div class="container">
+
+    <h2>Create Reseller</h2>
+
+
+
+
+
+    <form asp-action="AddOrganizationAdmin" method="post">
+       
+
+        <div class="form-group">
+            <label asp-for="OrgName"></label>
+            <input asp-for="OrgName" class="form-control" />
+            <span asp-validation-for="OrgName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OrgAdminName"></label>
+            <input asp-for="OrgAdminName" class="form-control" />
+            <span asp-validation-for="OrgAdminName" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OrgAdminEmail"></label>
+            <input asp-for="OrgAdminEmail" class="form-control" />
+            <span asp-validation-for="OrgAdminEmail" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OrgAdminPassword"></label>
+            <input asp-for="OrgAdminPassword" class="form-control" />
+            <span asp-validation-for="OrgAdminPassword" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OrgAdminMobNo"></label>
+            <input asp-for="OrgAdminMobNo" class="form-control" />
+            <span asp-validation-for="OrgAdminMobNo" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="AddressLineOne"></label>
+            <input asp-for="AddressLineOne" class="form-control" />
+            <span asp-validation-for="AddressLineOne" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="AddressLineTwo"></label>
+            <input asp-for="AddressLineTwo" class="form-control" />
+        </div>
+
+        <div class="form-group">
+            <label asp-for="City"></label>
+            <input asp-for="City" class="form-control" />
+            <span asp-validation-for="City" class="text-danger"></span>
+        </div>
+
+        @* <div class="form-group">
+        <label asp-for="State"></label>
+        <input asp-for="State" class="form-control" />
+        <span asp-validation-for="State" class="text-danger"></span>
+        </div> *@
+
+        <div class="form-group">
+            <label asp-for="State"></label>
+            <select asp-for="State" class="form-control">
+                <option value="">Select State</option>
+                <option value="Alabama">Alabama</option>
+                <option value="Alaska">Alaska</option>
+                <!-- Add more states as needed -->
+            </select>
+            <span asp-validation-for="State" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ZipCode"></label>
+            <input asp-for="ZipCode" class="form-control" />
+            <span asp-validation-for="ZipCode" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="OrgURL"></label>
+            <input asp-for="OrgURL" class="form-control" />
+            <span asp-validation-for="OrgURL" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ResellerName"></label>
+            <input asp-for="ResellerName" class="form-control" />
+            <span asp-validation-for="ResellerName" class="text-danger"></span>
+        </div>
+
+        @* <div class="form-group">
+        <label asp-for="RedCloudAdmin"></label>
+        <input asp-for="RedCloudAdmin" class="form-control" />
+        <span asp-validation-for="RedCloudAdmin" class="text-danger"></span>
+        </div> *@
+       @*  <div class="form-group">
+            <label asp-for="RedCloudAdmin"></label>
+            <div class="form-check">
+                <input asp-for="RedCloudAdmin" class="form-check-input" />
+                <label class="form-check-label" for="RedCloudAdmin">Red Cloud Admin</label>
+            </div>
+            <div class="form-check">
+                <input asp-for="RedCloudAdmin" class="form-check-input" />
+                <label class="form-check-label" for="RedCloudAdmin">Red Cloud Admin</label>
+            </div>
+            <span asp-validation-for="RedCloudAdmin" class="text-danger"></span>
+        </div>
+
+        <div class="form-group">
+            <label asp-for="ResellerName"></label>
+            <input asp-for="ResellerName" class="form-control" />
+            <span asp-validation-for="ResellerName" class="text-danger"></span>
+        </div> *@
+
+        <button type="submit" class="btn btn-primary mt-2">Create</button>
+    </form>
+</div>
